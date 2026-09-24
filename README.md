@@ -346,6 +346,10 @@ print("Inserted %i documents." % len(doc_splits))
 
 This creates a table called `qa_mini_demo` in your Astra DB and inserts **88 document chunks** with their vector embeddings. The data persists in the cloud, so you don't need to re-insert on subsequent runs (unless the table is dropped).
 
+<img width="3200" height="1802" alt="zf" src="https://github.com/user-attachments/assets/dec510af-1c51-4a18-820a-951b7bb0d480" />
+
+
+
 A retriever is then created:
 ```python
 retriever = astra_vector_store.as_retriever()
