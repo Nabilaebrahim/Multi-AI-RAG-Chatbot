@@ -75,6 +75,9 @@ User Question
          ▼
     Documents returned
     (END of current graph)
+
+<img width="862" height="574" alt="zo" src="https://github.com/user-attachments/assets/67d45d81-b55e-4132-8aad-0698c8ed0878" />
+
 ```
 
 The graph is built with **LangGraph** (`StateGraph`), where:
@@ -120,6 +123,7 @@ Groq provides blazing-fast LLM inference on specialized LPU hardware. The model 
 
 > **Secret name in Colab:** `GROQ_API_KEY`
 
+
 ---
 
 ### 2. HuggingFace Token
@@ -137,6 +141,9 @@ The embeddings model (`all-MiniLM-L6-v2`) is downloaded from HuggingFace. While 
 > **Secret name in Colab:** `HUGGINGFACEHUB_API_TOKEN`
 >
 > **Note:** In the current version of the notebook, the HuggingFace embeddings model is loaded directly without needing to explicitly pass the token (it reads from the environment). If you encounter authentication errors, set `HUGGINGFACEHUB_API_TOKEN` in your Colab secrets as well.
+
+<img width="3198" height="1812" alt="z" src="https://github.com/user-attachments/assets/24124d9f-503e-470d-a8eb-f2e44ac4e9e1" />
+
 
 ---
 
@@ -160,9 +167,15 @@ Astra DB is a serverless, cloud-native vector database built on Apache Cassandra
    - Still on the database dashboard, go to the **"Overview"** tab
    - Copy the **Database ID** (a UUID like `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`)
 
+   <img width="3200" height="1756" alt="zz" src="https://github.com/user-attachments/assets/3f985f33-678f-4a9b-9f37-d97eb238ce3f" />
+
+
+
+
 > **Secret names in Colab:**
 > - `ASTRA_DB_APPLICATION_TOKEN` ← the `AstraCS:...` token
 > - `ASTRA_DB_ID` ← the UUID of your database
+ <img width="3192" height="1668" alt="zzz" src="https://github.com/user-attachments/assets/9cb2f1e4-9777-46d7-9053-45132f29d05f" />
 
 ---
 
@@ -470,6 +483,9 @@ for output in app.stream(inputs):
 pprint(value['documents'][0].dict()['metadata']['description'])
 ```
 
+<img width="862" height="574" alt="zo" src="https://github.com/user-attachments/assets/84df2e0e-2898-41c3-bece-4e5a92bbf810" />
+
+
 ---
 
 ## The Router — How Routing Works
@@ -555,6 +571,11 @@ def route_question(state):
     elif source.datasource == "vectorstore":
         return "vectorstore"
 ```
+
+<img width="3192" height="1774" alt="xx" src="https://github.com/user-attachments/assets/a1f85bfe-a2c2-4087-9d82-0bb8da95f870" />
+<img width="3200" height="1752" alt="xxx" src="https://github.com/user-attachments/assets/0c6822f3-cd12-4475-9e80-f16f2db58904" />
+
+
 
 It returns a string key that LangGraph maps to the corresponding node name (defined in the `add_conditional_edges` call).
 
